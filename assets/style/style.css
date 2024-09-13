@@ -1,0 +1,340 @@
+/*----------------------------DELETE --------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*----------------------------DELETE --------------------------------*/
+
+
+
+/*----------------------------SETTING--------------------------------*/
+.workarea_main * {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #22292E;
+    scroll-behavior: smooth;
+    transition: all .5s, display .5s;
+    list-style: none;
+    font-family: 'Inter Tight', sans-serif;
+    box-sizing: border-box;
+}
+
+.section {
+    max-width: 1173px;
+    margin: 0 auto;
+}
+
+.mobile {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.mt64 {
+    margin-top: 64px;
+}
+
+.mb64 {
+    margin-bottom: 64px;
+}
+
+/*----------------------------SETTING--------------------------------*/
+
+/*----------------------------FONTS--------------------------------*/
+@font-face {
+    font-family: 'Inter Tight';
+    src: url("../fonts/InterTight-VariableFont_wght.ttf");
+}
+
+/*-----------------------------FONTS--------------------------------*/
+
+
+/*-----------------------------COMPANENTS--------------------------------*/
+/*-----------------------------BTN--------------------------------*/
+.filter__btn-size {
+    padding: 12px 40px;
+}
+
+.btn-glav {
+    background: #3B9DF7;
+    border: none;
+    border-radius: 90px;
+}
+
+.btn-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+
+    color: #FFFFFF;
+}
+
+.btn-fluorine {
+    color: #676F75;
+    border: none;
+    border-radius: 90px;
+}
+
+/*-----------------------------hover--------------------------------*/
+.btn-glav:hover {
+    filter: brightness(115%);
+}
+
+.btn-fluorine:hover {
+    filter: brightness(90%);
+}
+
+/*-----------------------------hover--------------------------------*/
+/*-----------------------------BTN--------------------------------*/
+/*-----------------------------COMPANENTS--------------------------------*/
+
+
+/*-----------------------------BREADCRUMBS--------------------------------*/
+.breadcrumbs__ico {
+    height: 25px;
+}
+
+.breadcrumbs {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    margin-top: 128px;
+}
+
+.breadcrumbs__link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+
+    color: #AFB4B8;
+    display: inline-block;
+}
+
+#breadcrumbs__active {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+
+    color: #22292E;
+}
+
+
+/*-----------------------------BREADCRUMBS--------------------------------*/
+
+
+/*-----------------------------MAIN--------------------------------*/
+.main__row {
+    display: flex;
+    gap: 27px;
+}
+
+/*-----------------------------LEFTMENU--------------------------------*/
+.main__leftmeny {
+    width: 272px;
+}
+
+.leftmenu-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.leftmenu-name p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+
+    color: #22292E;
+}
+
+/*-------------------ACCORDION---------------------*/
+.leftmenu__accordion {
+    border-top: 1px solid #EFF2F5;
+    /* padding-top: 20px; */
+}
+
+.accordion {
+    width: 100%;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    text-align: left;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.4s;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+
+    color: #22292E;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 20px;
+    padding: 20px;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.6s ease-in-out;
+
+}
+
+
+.accordion.active+.panel {
+    transition: max-height 0.6s ease-in-out;
+    max-height: 500px;
+}
+
+.accordion:after {
+    content: url("../img/ico/accordion-close.svg");
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: url("../img/ico/accordion-open.svg");
+}
+
+.accardion-panel__container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    margin-top: 10px;
+}
+
+.accordion:hover {
+    background-color: #ccc;
+}
+
+/*-------------------ACCORDION---------------------*/
+
+
+/*-----------------------------CHEKCBOX--------------------------------*/
+
+.custom-checkbox>input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-checkbox>span {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+
+    color: #676F75;
+}
+
+.custom-checkbox>span::before {
+    content: '';
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #EFF2F5;
+    cursor: pointer;
+
+}
+
+.custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+    border-color: #3BADF7;
+}
+
+
+.custom-checkbox>input:not(:disabled):active+span::before {
+    background-color: #3BADF7;
+}
+
+.custom-checkbox>input:checked+span::before {
+    background-color: #3BADF7;
+    background-image: url("../img/ico/checkbox.svg");
+}
+
+.custom-checkbox>input:disabled+span::before {
+    background-color: #e9ecef;
+}
+
+/*-----------------------------CHEKCBOX--------------------------------*/
+
+/*-----------------------------FILTER_BTN--------------------------------*/
+.filter__btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+/*-----------------------------FILTER_BTN--------------------------------*/
+
+/*-----------------------------CATEGORY--------------------------------*/
+.category {
+    margin-top: 128px;
+}
+
+.category__link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+
+    color: #676F75;
+
+}
+
+.category__active {
+    font-weight: 500;
+
+    color: #3B9DF7;
+}
+
+.category__active::before {
+    content: url('../img/ico/category-active.png');
+    margin-right: 4px;
+}
+
+/*-----------------------------CATEGORY--------------------------------*/
+
+/*-----------------------------LEFTMENU--------------------------------*/
+
+
+
+/*-----------------------------MAIN--------------------------------*/
