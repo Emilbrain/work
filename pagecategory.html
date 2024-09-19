@@ -257,20 +257,6 @@
     <!-- ------------------------------JAVASCRIPT----------------------------------- -->
     <!-- ------------------------------accordion_filter----------------------------------- -->
     <script>
-        // var acc = document.getElementsByClassName("accordion_filter");
-        // var i;
-
-        // for (i = 0; i < acc.length; i++) {
-        //     acc[i].addEventListener("click", function () {
-        //         this.classList.toggle("active");
-        //     //     var panel = this.nextElementSibling;
-        //     //     if (panel.style.maxHeight) {
-        //     //         panel.style.maxHeight = null;
-        //     //     } else {
-        //     //         panel.style.maxHeight = panel.scrollHeight + "px";
-        //     //     }
-        //     });
-        // }
         var acc = document.getElementsByClassName("accordion_filter");
         var i;
 
@@ -278,10 +264,10 @@
             acc[i].addEventListener("click", function () {
                 this.classList.toggle("active");
                 var panel = this.nextElementSibling;
-                if (panel.style.maxHeight === "0px") {
-                    panel.style.maxHeight = "500px";
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
                 } else {
-                    panel.style.maxHeight = "0px";
+                    panel.style.maxHeight = panel.scrollHeight + "px";
                 }
             });
         }
