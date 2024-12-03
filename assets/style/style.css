@@ -15,7 +15,7 @@
     text-decoration: none;
     color: #22292E;
     scroll-behavior: smooth;
-    transition: .5s ease;
+    /* transition: .5s ease; */
     font-family: 'Inter Tight', sans-serif;
     box-sizing: border-box;
 }
@@ -223,16 +223,27 @@ h2 {
 .panel {
     padding: 0 18px;
     background-color: white;
-    overflow: hidden;
     max-height: 0;
-    transition: max-height 0.6s ease-in-out;
+    /* transition: max-height 0.4s ease-out; */
+    opacity: 0;
+    overflow: hidden;
+    /* transition: all 0.4s ease-in-out; */
 
+}
+
+.accordion:hover+.panel,    
+.panel:hover {
+    transition: max-height 0.4s ease-out;
+    transition: all 0.4s ease-in-out;
 }
 
 
 .accordion.active+.panel {
-    transition: max-height 0.6s ease-in-out;
+    /* transition: max-height 0.6s ease-in-out; */
     max-height: 500px;
+    opacity: 1;
+    height: auto;
+    /* overflow: visible; */
 }
 
 .accordion:after {
